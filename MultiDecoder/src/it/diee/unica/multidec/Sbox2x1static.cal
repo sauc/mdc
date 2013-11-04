@@ -1,0 +1,12 @@
+package it.diee.unica.multidec;
+
+ actor Sbox2x1static (bool SEL = false) int(size=8)Input1, int(size=8)Input2 ==> int(size=8)Output:
+
+action Input1: [a] ==> Output: [a]  guard not SEL
+ end
+
+action Input2: [a] ==> Output: [a]  guard SEL
+ end
+
+
+end
