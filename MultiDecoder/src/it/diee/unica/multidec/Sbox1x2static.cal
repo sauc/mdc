@@ -1,6 +1,6 @@
 package it.diee.unica.multidec;
 
- actor Sbox1x2static (bool SEL = false) int(size=8)Input ==> int(size=8)Output1, int(size=8)Output2:
+ actor Sbox1x2static (bool SEL = false, int SIZE = 8) int(size=SIZE)Input ==> int(size=SIZE)Output1, int(size=SIZE)Output2:
 
 action Input: [a] ==> Output1: [a]  guard not SEL
  end
