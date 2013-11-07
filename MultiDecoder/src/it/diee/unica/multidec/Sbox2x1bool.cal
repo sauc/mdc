@@ -1,6 +1,6 @@
 package it.diee.unica.multidec;
 
-actor Sbox2x1 (bool SEL = true, int SIZE = 12) int(size=SIZE)in1, int(size=SIZE)in2 ==> int(size=SIZE)out1:
+actor Sbox2x1bool (bool SEL = true) bool in1, bool in2 ==> bool out1:
 
 action in1: [a] ==> out1: [a]  guard not SEL
  end
