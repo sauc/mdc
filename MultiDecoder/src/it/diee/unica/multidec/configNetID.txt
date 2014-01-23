@@ -1,0 +1,2 @@
+kernel: Decoder --> config id:1
+kernel: Decoder_Parallel --> config id:2
