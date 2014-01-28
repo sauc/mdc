@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XDF name="TopMultiDecoder_last">
+    <Instance id="multi_dec">
+        <Class name="it.diee.unica.multidec.00_Decoder_intra1Decoder_parallel1"/>
+    </Instance>
+    <Instance id="source">
+        <Class name="ch.epfl.xronos.mpeg4.common.Source"/>
+    </Instance>
+    <Instance id="display">
+        <Class name="ch.epfl.xronos.mpeg4.common.DisplayYUV"/>
+    </Instance>
+    <Connection dst="multi_dec" dst-port="bits" src="source" src-port="O"/>
+    <Connection dst="display" dst-port="WIDTH" src="multi_dec" src-port="WIDTH"/>
+    <Connection dst="display" dst-port="HEIGHT" src="multi_dec" src-port="HEIGHT"/>
+    <Connection dst="display" dst-port="B" src="multi_dec" src-port="VID"/>
+</XDF>

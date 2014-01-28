@@ -1,0 +1,2 @@
+Decoder_Intra --> config id:1
+Decoder_parallel --> config id:2

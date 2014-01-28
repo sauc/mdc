@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XDF name="TopMultiDecoder">
+    <Instance id="multi_dec">
+        <Class name="it.diee.unica.multidec.00_Decoder_Parallel1Decoder1"/>
+    </Instance>
+    <Instance id="source">
+        <Class name="ch.epfl.common.Source"/>
+    </Instance>
+    <Instance id="display">
+        <Class name="ch.epfl.common.Display"/>
+    </Instance>
+    <Connection dst="multi_dec" dst-port="bits" src="source" src-port="O"/>
+    <Connection dst="display" dst-port="Byte" src="multi_dec" src-port="VID"/>
+    <Connection dst="display" dst-port="SIZE" src="multi_dec" src-port="SIZE"/>
+</XDF>

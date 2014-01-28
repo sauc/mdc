@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XDF name="00_Decoder_Parallel1Decoder1">
+    <Port kind="Input" name="bits">
+        <Type name="uint">
+            <Entry kind="Expr" name="size">
+                <Expr kind="Literal" literal-kind="Integer" value="1"/>
+            </Entry>
+        </Type>
+    </Port>
+    <Port kind="Output" name="VID">
+        <Type name="uint">
+            <Entry kind="Expr" name="size">
+                <Expr kind="Literal" literal-kind="Integer" value="8"/>
+            </Entry>
+        </Type>
+    </Port>
+    <Port kind="Output" name="SIZE">
+        <Type name="int">
+            <Entry kind="Expr" name="size">
+                <Expr kind="Literal" literal-kind="Integer" value="16"/>
+            </Entry>
+        </Type>
+    </Port>
+    <Instance id="Mgnt_Merger420_0">
+        <Class name="org.sc29.wg11.common.Mgnt_Merger420"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Synp_MPEG_4_0">
+        <Class name="ch.epfl.mpeg4.part2.parser.Algo_Synp_MPEG_4"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="BlockExpand_0">
+        <Class name="ch.epfl.mpeg4.part2.parser.BlockExpand"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="MVRecon_0">
+        <Class name="ch.epfl.mpeg4.part2.parser.MVRecon"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="splitter_BTYPE_0">
+        <Class name="org.ietr.mpeg4.part2.sp.parser.splitter_BTYPE"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="splitter_MV_0">
+        <Class name="org.ietr.mpeg4.part2.sp.parser.splitter_MV"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="splitter_420_B_0">
+        <Class name="org.ietr.mpeg4.part2.sp.parser.splitter_420_B"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="splitter_Qp_0">
+        <Class name="org.ietr.mpeg4.part2.sp.parser.splitter_Qp"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Interpolation_halfpel_0">
+        <Class name="com.ericsson.mpeg4.part2.sp.Algo_Interpolation_halfpel"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Add_0">
+        <Class name="org.ietr.mpeg4.part2.sp.motion.Algo_Add"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Framebuf_w_Address_16X16_0">
+        <Class name="com.ericsson.mpeg4.part2.sp.Framebuf_w_Address_16X16"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Interpolation_halfpel_1">
+        <Class name="com.ericsson.mpeg4.part2.sp.Algo_Interpolation_halfpel"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Add_1">
+        <Class name="org.ietr.mpeg4.part2.sp.motion.Algo_Add"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Framebuf_w_Address_8X8_0">
+        <Class name="com.ericsson.mpeg4.part2.sp.Framebuf_w_Address_8X8"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Interpolation_halfpel_2">
+        <Class name="com.ericsson.mpeg4.part2.sp.Algo_Interpolation_halfpel"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Add_2">
+        <Class name="org.ietr.mpeg4.part2.sp.motion.Algo_Add"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Framebuf_w_Address_8X8_1">
+        <Class name="com.ericsson.mpeg4.part2.sp.Framebuf_w_Address_8X8"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="idct2d_0">
+        <Class name="ch.epfl.mpeg4.part2.texture.idct2d"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="IS_0">
+        <Class name="ch.epfl.mpeg4.part2.texture.IS"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="InverseDCPred16x16_0">
+        <Class name="ch.epfl.mpeg4.part2.texture.InverseDCPred16x16"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="InverseACPred16x16_0">
+        <Class name="ch.epfl.mpeg4.part2.texture.InverseACPred16x16"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="IQ_0">
+        <Class name="ch.epfl.mpeg4.part2.texture.IQ"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="idct2d_1">
+        <Class name="ch.epfl.mpeg4.part2.texture.idct2d"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="IS_1">
+        <Class name="ch.epfl.mpeg4.part2.texture.IS"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="InverseDCPred8x8_0">
+        <Class name="ch.epfl.mpeg4.part2.texture.InverseDCPred8x8"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="InverseACPred8x8_0">
+        <Class name="ch.epfl.mpeg4.part2.texture.InverseACPred8x8"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="IQ_1">
+        <Class name="ch.epfl.mpeg4.part2.texture.IQ"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="idct2d_2">
+        <Class name="ch.epfl.mpeg4.part2.texture.idct2d"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="IS_2">
+        <Class name="ch.epfl.mpeg4.part2.texture.IS"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="InverseDCPred8x8_1">
+        <Class name="ch.epfl.mpeg4.part2.texture.InverseDCPred8x8"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="InverseACPred8x8_1">
+        <Class name="ch.epfl.mpeg4.part2.texture.InverseACPred8x8"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="IQ_2">
+        <Class name="ch.epfl.mpeg4.part2.texture.IQ"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="InverseDCPred_0">
+        <Class name="ch.epfl.mpeg4.part2.texture.InverseDCPred"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="InverseACPred_0">
+        <Class name="ch.epfl.mpeg4.part2.texture.InverseACPred"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Interpolation_0">
+        <Class name="ch.epfl.mpeg4.part2.motion.Interpolation"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Add2_0">
+        <Class name="ch.epfl.mpeg4.part2.motion.Algo_Add"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Framebuffer_0">
+        <Class name="ch.epfl.mpeg4.part2.motion.Framebuffer"/>
+        <Attribute kind="Flag" name="ch.epfl.mpeg4.part2.Decoder"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_0">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="12"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_1">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="12"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_2">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="6"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_3">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="13"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_4">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="9"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_5">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="9"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_6">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="13"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_7">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="2"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_8">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="13"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_9">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="13"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_10">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="6"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_11">
+        <Class name="it.diee.unica.multidec.Sbox2x1bool"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_12">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="8"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Connection dst="Algo_Synp_MPEG_4_0" dst-port="bits" src="" src-port="bits"/>
+    <Connection dst="splitter_BTYPE_0" dst-port="BTYPE" src="sbox_0" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="BlockExpand_0" dst-port="VALUE"
+        src="Algo_Synp_MPEG_4_0" src-port="VALUE"/>
+    <Connection dst="BlockExpand_0" dst-port="LAST"
+        src="Algo_Synp_MPEG_4_0" src-port="LAST"/>
+    <Connection dst="BlockExpand_0" dst-port="RUN"
+        src="Algo_Synp_MPEG_4_0" src-port="RUN"/>
+    <Connection dst="MVRecon_0" dst-port="MVIN" src="Algo_Synp_MPEG_4_0" src-port="MV"/>
+    <Connection dst="splitter_420_B_0" dst-port="BTYPE" src="sbox_0" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="" dst-port="SIZE" src="Algo_Synp_MPEG_4_0" src-port="SIZE"/>
+    <Connection dst="Algo_Add_0" dst-port="MOT"
+        src="Algo_Interpolation_halfpel_0" src-port="MOT"/>
+    <Connection dst="Algo_Add_0" dst-port="BTYPE" src="splitter_BTYPE_0" src-port="Y">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="Algo_Add_0" dst-port="TEX" src="idct2d_0" src-port="f"/>
+    <Connection dst="Framebuf_w_Address_16X16_0" dst-port="WD"
+        src="Algo_Add_0" src-port="VID">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="Framebuf_w_Address_16X16_0" dst-port="BTYPE"
+        src="splitter_BTYPE_0" src-port="Y">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="Framebuf_w_Address_16X16_0" dst-port="MV"
+        src="splitter_MV_0" src-port="Y"/>
+    <Connection dst="Algo_Add_1" dst-port="MOT"
+        src="Algo_Interpolation_halfpel_1" src-port="MOT"/>
+    <Connection dst="Algo_Add_1" dst-port="BTYPE" src="splitter_BTYPE_0" src-port="U">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="Algo_Add_1" dst-port="TEX" src="idct2d_1" src-port="f"/>
+    <Connection dst="Framebuf_w_Address_8X8_0" dst-port="WD"
+        src="Algo_Add_1" src-port="VID">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="Framebuf_w_Address_8X8_0" dst-port="BTYPE"
+        src="splitter_BTYPE_0" src-port="U">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="Framebuf_w_Address_8X8_0" dst-port="MV"
+        src="splitter_MV_0" src-port="U"/>
+    <Connection dst="Algo_Add_2" dst-port="MOT"
+        src="Algo_Interpolation_halfpel_2" src-port="MOT"/>
+    <Connection dst="Algo_Add_2" dst-port="BTYPE" src="splitter_BTYPE_0" src-port="V">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="Framebuf_w_Address_8X8_1" dst-port="WD"
+        src="Algo_Add_2" src-port="VID">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="Framebuf_w_Address_8X8_1" dst-port="BTYPE"
+        src="splitter_BTYPE_0" src-port="V">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="Framebuf_w_Address_8X8_1" dst-port="MV"
+        src="splitter_MV_0" src-port="V"/>
+    <Connection dst="InverseDCPred16x16_0" dst-port="BTYPE"
+        src="splitter_BTYPE_0" src-port="Y">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="InverseDCPred16x16_0" dst-port="QP"
+        src="splitter_Qp_0" src-port="QUANT_Y"/>
+    <Connection dst="InverseDCPred16x16_0" dst-port="QFS_in"
+        src="splitter_420_B_0" src-port="Y"/>
+    <Connection dst="InverseDCPred8x8_0" dst-port="BTYPE"
+        src="splitter_BTYPE_0" src-port="U">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="InverseDCPred8x8_0" dst-port="QP"
+        src="splitter_Qp_0" src-port="QUANT_U"/>
+    <Connection dst="InverseDCPred8x8_0" dst-port="QFS_in"
+        src="splitter_420_B_0" src-port="U"/>
+    <Connection dst="InverseDCPred8x8_1" dst-port="BTYPE"
+        src="splitter_BTYPE_0" src-port="V">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="InverseDCPred8x8_1" dst-port="QP"
+        src="splitter_Qp_0" src-port="QUANT_V"/>
+    <Connection dst="InverseDCPred8x8_1" dst-port="QFS_in"
+        src="splitter_420_B_0" src-port="V"/>
+    <Connection dst="Mgnt_Merger420_0" dst-port="Y" src="Algo_Add_0" src-port="VID">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="Mgnt_Merger420_0" dst-port="U" src="Algo_Add_1" src-port="VID">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="Mgnt_Merger420_0" dst-port="V" src="Algo_Add_2" src-port="VID">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="Algo_Interpolation_halfpel_0" dst-port="halfpel"
+        src="Framebuf_w_Address_16X16_0" src-port="halfpel"/>
+    <Connection dst="Algo_Interpolation_halfpel_0" dst-port="RD"
+        src="Framebuf_w_Address_16X16_0" src-port="RD"/>
+    <Connection dst="Algo_Interpolation_halfpel_1" dst-port="halfpel"
+        src="Framebuf_w_Address_8X8_0" src-port="halfpel"/>
+    <Connection dst="Algo_Interpolation_halfpel_1" dst-port="RD"
+        src="Framebuf_w_Address_8X8_0" src-port="RD"/>
+    <Connection dst="Algo_Interpolation_halfpel_2" dst-port="halfpel"
+        src="Framebuf_w_Address_8X8_1" src-port="halfpel"/>
+    <Connection dst="Algo_Interpolation_halfpel_2" dst-port="RD"
+        src="Framebuf_w_Address_8X8_1" src-port="RD"/>
+    <Connection dst="IS_0" dst-port="QFS" src="InverseDCPred16x16_0" src-port="QFS"/>
+    <Connection dst="IS_0" dst-port="AC_PRED_DIR"
+        src="InverseDCPred16x16_0" src-port="AC_PRED_DIR">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="InverseACPred16x16_0" dst-port="PQF" src="IS_0" src-port="PQF"/>
+    <Connection dst="InverseACPred16x16_0" dst-port="SKIPPED"
+        src="InverseDCPred16x16_0" src-port="SKIPPED"/>
+    <Connection dst="InverseACPred16x16_0" dst-port="POS"
+        src="InverseDCPred16x16_0" src-port="POS"/>
+    <Connection dst="InverseACPred16x16_0" dst-port="AC_PRED_DIR"
+        src="InverseDCPred16x16_0" src-port="AC_PRED_DIR">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="IQ_0" dst-port="QF" src="InverseACPred16x16_0" src-port="QF"/>
+    <Connection dst="IQ_0" dst-port="QP" src="InverseDCPred16x16_0" src-port="QP_OUT"/>
+    <Connection dst="idct2d_0" dst-port="F" src="IQ_0" src-port="F"/>
+    <Connection dst="idct2d_0" dst-port="SIGNED"
+        src="InverseDCPred16x16_0" src-port="SIGNED"/>
+    <Connection dst="IS_1" dst-port="QFS" src="InverseDCPred8x8_0" src-port="QFS"/>
+    <Connection dst="IS_1" dst-port="AC_PRED_DIR"
+        src="InverseDCPred8x8_0" src-port="AC_PRED_DIR">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="InverseACPred8x8_0" dst-port="PQF" src="IS_1" src-port="PQF"/>
+    <Connection dst="InverseACPred8x8_0" dst-port="SKIPPED"
+        src="InverseDCPred8x8_0" src-port="SKIPPED"/>
+    <Connection dst="InverseACPred8x8_0" dst-port="AC_PRED_DIR"
+        src="InverseDCPred8x8_0" src-port="AC_PRED_DIR">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="InverseACPred8x8_0" dst-port="POS"
+        src="InverseDCPred8x8_0" src-port="POS"/>
+    <Connection dst="IQ_1" dst-port="QF" src="InverseACPred8x8_0" src-port="QF"/>
+    <Connection dst="IQ_1" dst-port="QP" src="InverseDCPred8x8_0" src-port="QP_OUT"/>
+    <Connection dst="idct2d_1" dst-port="F" src="IQ_1" src-port="F"/>
+    <Connection dst="idct2d_1" dst-port="SIGNED"
+        src="InverseDCPred8x8_0" src-port="SIGNED"/>
+    <Connection dst="InverseACPred8x8_1" dst-port="SKIPPED"
+        src="InverseDCPred8x8_1" src-port="SKIPPED"/>
+    <Connection dst="InverseACPred8x8_1" dst-port="AC_PRED_DIR"
+        src="InverseDCPred8x8_1" src-port="AC_PRED_DIR">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="InverseACPred8x8_1" dst-port="POS"
+        src="InverseDCPred8x8_1" src-port="POS"/>
+    <Connection dst="idct2d_2" dst-port="F" src="IQ_2" src-port="F"/>
+    <Connection dst="splitter_MV_0" dst-port="BTYPE" src="sbox_0" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="sbox_0" dst-port="in1" src="Algo_Synp_MPEG_4_0" src-port="BTYPE"/>
+    <Connection dst="sbox_1" dst-port="in1" src="sbox_0" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="MVRecon_0" dst-port="BTYPE" src="sbox_1" src-port="out1"/>
+    <Connection dst="sbox_1" dst-port="in2" src="sbox_0" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder"/>
+    </Connection>
+    <Connection dst="splitter_Qp_0" dst-port="QP" src="sbox_2" src-port="out1"/>
+    <Connection dst="sbox_2" dst-port="in1" src="Algo_Synp_MPEG_4_0" src-port="QP"/>
+    <Connection dst="InverseDCPred_0" dst-port="QP" src="sbox_2" src-port="out2"/>
+    <Connection dst="InverseDCPred_0" dst-port="BTYPE" src="sbox_0" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder"/>
+    </Connection>
+    <Connection dst="splitter_420_B_0" dst-port="B" src="sbox_3" src-port="out1"/>
+    <Connection dst="sbox_3" dst-port="in1" src="BlockExpand_0" src-port="QFS"/>
+    <Connection dst="InverseDCPred_0" dst-port="QFS_in" src="sbox_3" src-port="out2"/>
+    <Connection dst="Algo_Add2_0" dst-port="MOT" src="Interpolation_0" src-port="MOT"/>
+    <Connection dst="Algo_Add2_0" dst-port="BTYPE" src="sbox_0" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder"/>
+    </Connection>
+    <Connection dst="Algo_Add_2" dst-port="TEX" src="sbox_4" src-port="out1"/>
+    <Connection dst="sbox_4" dst-port="in1" src="idct2d_2" src-port="f"/>
+    <Connection dst="Algo_Add2_0" dst-port="TEX" src="sbox_4" src-port="out2"/>
+    <Connection dst="Framebuffer_0" dst-port="WD" src="Algo_Add2_0" src-port="VID">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder"/>
+    </Connection>
+    <Connection dst="Framebuffer_0" dst-port="BTYPE" src="sbox_0" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder"/>
+    </Connection>
+    <Connection dst="splitter_MV_0" dst-port="MV" src="sbox_5" src-port="out1"/>
+    <Connection dst="sbox_5" dst-port="in1" src="MVRecon_0" src-port="MV"/>
+    <Connection dst="Framebuffer_0" dst-port="MV" src="sbox_5" src-port="out2"/>
+    <Connection dst="sbox_6" dst-port="in1" src="InverseDCPred8x8_1" src-port="QFS"/>
+    <Connection dst="IS_2" dst-port="QFS" src="sbox_6" src-port="out1"/>
+    <Connection dst="sbox_6" dst-port="in2" src="InverseDCPred_0" src-port="QFS"/>
+    <Connection dst="sbox_7" dst-port="in1" src="InverseDCPred8x8_1" src-port="AC_PRED_DIR">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder_Parallel"/>
+    </Connection>
+    <Connection dst="IS_2" dst-port="AC_PRED_DIR" src="sbox_7" src-port="out1"/>
+    <Connection dst="sbox_7" dst-port="in2" src="InverseDCPred_0" src-port="AC_PRED_DIR">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder"/>
+    </Connection>
+    <Connection dst="InverseACPred8x8_1" dst-port="PQF" src="sbox_8" src-port="out1"/>
+    <Connection dst="sbox_8" dst-port="in1" src="IS_2" src-port="PQF"/>
+    <Connection dst="InverseACPred_0" dst-port="PQF" src="sbox_8" src-port="out2"/>
+    <Connection dst="InverseACPred_0" dst-port="SKIPPED"
+        src="InverseDCPred_0" src-port="SKIPPED"/>
+    <Connection dst="InverseACPred_0" dst-port="POS"
+        src="InverseDCPred_0" src-port="POS"/>
+    <Connection dst="InverseACPred_0" dst-port="AC_PRED_DIR"
+        src="InverseDCPred_0" src-port="AC_PRED_DIR">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder"/>
+    </Connection>
+    <Connection dst="sbox_9" dst-port="in1" src="InverseACPred8x8_1" src-port="QF"/>
+    <Connection dst="IQ_2" dst-port="QF" src="sbox_9" src-port="out1"/>
+    <Connection dst="sbox_9" dst-port="in2" src="InverseACPred_0" src-port="QF"/>
+    <Connection dst="sbox_10" dst-port="in1" src="InverseDCPred8x8_1" src-port="QP_OUT"/>
+    <Connection dst="IQ_2" dst-port="QP" src="sbox_10" src-port="out1"/>
+    <Connection dst="sbox_10" dst-port="in2" src="InverseDCPred_0" src-port="QP_OUT"/>
+    <Connection dst="sbox_11" dst-port="in1" src="InverseDCPred8x8_1" src-port="SIGNED"/>
+    <Connection dst="idct2d_2" dst-port="SIGNED" src="sbox_11" src-port="out1"/>
+    <Connection dst="sbox_11" dst-port="in2" src="InverseDCPred_0" src-port="SIGNED"/>
+    <Connection dst="sbox_12" dst-port="in1" src="Mgnt_Merger420_0" src-port="YUV"/>
+    <Connection dst="" dst-port="VID" src="sbox_12" src-port="out1"/>
+    <Connection dst="sbox_12" dst-port="in2" src="Algo_Add2_0" src-port="VID">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.mpeg4.part2.Decoder"/>
+    </Connection>
+    <Connection dst="Interpolation_0" dst-port="halfpel"
+        src="Framebuffer_0" src-port="halfpel"/>
+    <Connection dst="Interpolation_0" dst-port="RD" src="Framebuffer_0" src-port="RD"/>
+</XDF>
