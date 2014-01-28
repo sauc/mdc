@@ -15,8 +15,8 @@
     <Instance id="multidecoder">
         <Class name="it.diee.unica.multidec.00_Decoder_intra1Decoder_parallel1"/>
     </Instance>
-    <Connection dst="multidecoder" dst-port="bits" src="Source" src-port="bit"/>
     <Connection dst="display" dst-port="Byte" src="multidecoder" src-port="VID"/>
     <Connection dst="display" dst-port="W" src="multidecoder" src-port="WIDTH"/>
     <Connection dst="display" dst-port="H" src="multidecoder" src-port="HEIGHT"/>
+    <Connection dst="multidecoder" dst-port="bits" src="Source" src-port="BYTE"/>
 </XDF>
