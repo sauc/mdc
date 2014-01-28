@@ -2,20 +2,21 @@
 <XDF name="TopDecoder">
     <Instance id="Source">
         <Class name="co.turnus.cal.stdio.Source"/>
-        <Parameter name="file">
-            <Expr kind="Literal" literal-kind="String" value="jvc000_6.m4v"/>
-        </Parameter>
         <Parameter name="loops">
             <Expr kind="Literal" literal-kind="Integer" value="1"/>
+        </Parameter>
+        <Parameter name="file">
+            <Expr kind="Literal" literal-kind="String" value="jvc000_6.m4v"/>
         </Parameter>
     </Instance>
     <Instance id="display">
         <Class name="co.turnus.cal.stdio.Display"/>
     </Instance>
-    <Instance id="decoder">
-        <Class name="it.diee.unica.multidec.00_Decoder_Parallel1Decoder1"/>
+    <Instance id="multidecoder">
+        <Class name="it.diee.unica.multidec.00_Decoder_intra1Decoder_parallel1"/>
     </Instance>
-    <Connection dst="decoder" dst-port="bits" src="Source" src-port="bit"/>
-    <Connection dst="display" dst-port="Byte" src="decoder" src-port="VID"/>
-    <Connection dst="display" dst-port="SIZE" src="decoder" src-port="SIZE"/>
+    <Connection dst="multidecoder" dst-port="bits" src="Source" src-port="bit"/>
+    <Connection dst="display" dst-port="Byte" src="multidecoder" src-port="VID"/>
+    <Connection dst="display" dst-port="W" src="multidecoder" src-port="WIDTH"/>
+    <Connection dst="display" dst-port="H" src="multidecoder" src-port="HEIGHT"/>
 </XDF>
