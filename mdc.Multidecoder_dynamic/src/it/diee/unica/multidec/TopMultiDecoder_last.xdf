@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XDF name="TopMultiDecoder_last">
+    <Instance id="multi_dec">
+        <Class name="it.diee.unica.multidec.00_Decoder_intra1Decoder_parallel1"/>
+    </Instance>
+    <Instance id="source">
+        <Class name="it.diee.unica.multidec.Source"/>
+    </Instance>
+    <Instance id="display">
+        <Class name="it.diee.unica.multidec.DisplayYUV"/>
+    </Instance>
+    <Instance id="sourceID">
+        <Class name="it.diee.unica.multidec.SourceID"/>
+    </Instance>
+    <Connection dst="multi_dec" dst-port="bits" src="source" src-port="O"/>
+    <Connection dst="display" dst-port="WIDTH" src="multi_dec" src-port="WIDTH"/>
+    <Connection dst="display" dst-port="HEIGHT" src="multi_dec" src-port="HEIGHT"/>
+    <Connection dst="display" dst-port="B" src="multi_dec" src-port="VID"/>
+    <Connection dst="multi_dec" dst-port="ID" src="sourceID" src-port="ID"/>
+</XDF>

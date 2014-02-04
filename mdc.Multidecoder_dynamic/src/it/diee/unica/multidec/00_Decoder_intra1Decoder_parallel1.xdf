@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XDF name="00_Decoder_Intra1Decoder_parallel1">
+    <Port kind="Input" name="bits">
+        <Type name="uint">
+            <Entry kind="Expr" name="size">
+                <Expr kind="Literal" literal-kind="Integer" value="8"/>
+            </Entry>
+        </Type>
+    </Port>
+    <Port kind="Input" name="ID">
+        <Type name="int">
+            <Entry kind="Expr" name="size">
+                <Expr kind="Literal" literal-kind="Integer" value="8"/>
+            </Entry>
+        </Type>
+    </Port>
+    <Port kind="Output" name="WIDTH">
+        <Type name="int">
+            <Entry kind="Expr" name="size">
+                <Expr kind="Literal" literal-kind="Integer" value="16"/>
+            </Entry>
+        </Type>
+    </Port>
+    <Port kind="Output" name="HEIGHT">
+        <Type name="int">
+            <Entry kind="Expr" name="size">
+                <Expr kind="Literal" literal-kind="Integer" value="16"/>
+            </Entry>
+        </Type>
+    </Port>
+    <Port kind="Output" name="VID">
+        <Type name="uint">
+            <Entry kind="Expr" name="size">
+                <Expr kind="Literal" literal-kind="Integer" value="8"/>
+            </Entry>
+        </Type>
+    </Port>
+    <Instance id="Mgnt_Merger420_0">
+        <Class name="ch.epfl.xronos.mpeg4.common.Mgnt_Merger420"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Synp_MPEG_4_0">
+        <Class name="org.ietr.mpeg4.part2.sp.parser.Algo_Synp_MPEG_4"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Mgnt_BlockExpand_0">
+        <Class name="org.sc29.wg11.mpeg4.part2.sp.parser.Mgnt_BlockExpand"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="splitter_BTYPE_0">
+        <Class name="org.ietr.mpeg4.part2.sp.parser.splitter_BTYPE"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="splitter_420_B_0">
+        <Class name="org.ietr.mpeg4.part2.sp.parser.splitter_420_B"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="splitter_Qp_0">
+        <Class name="org.ietr.mpeg4.part2.sp.parser.splitter_Qp"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="MV_consume_0">
+        <Class name="com.ericsson.mpeg4.part2.sp.MV_consume"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Byte2bit_0">
+        <Class name="org.sc29.wg11.common.Algo_Byte2bit"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Mgnt_DCSplit_0">
+        <Class name="org.sc29.wg11.mpeg4.part2.sp.texture.Mgnt_DCSplit"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_IS_0">
+        <Class name="com.ericsson.mpeg4.part2.sp.Algo_IS"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_IAP_AdaptiveHorizontalOrVerticalPred_16x16_0">
+        <Class name="ch.epfl.xronos.mpeg4.part2.texture.Algo_IAP_AdaptiveHorizontalOrVerticalPred_16x16"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_0">
+        <Class name="ch.epfl.xronos.mpeg4.part2.texture.Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_IDCT2D_ISOIEC_23002_1_0">
+        <Class name="ch.epfl.xronos.mpeg4.part2.texture.Algo_IDCT2D_ISOIEC_23002_1"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_DCRaddressing_16x16_0">
+        <Class name="org.ietr.mpeg4.part2.sp.texture.dcReconstruction.Algo_DCRaddressing_16x16"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_DCRinvpred_luma_16x16_0">
+        <Class name="org.ietr.mpeg4.part2.sp.texture.dcReconstruction.Algo_DCRinvpred_luma_16x16"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Mgnt_DCSplit_1">
+        <Class name="org.sc29.wg11.mpeg4.part2.sp.texture.Mgnt_DCSplit"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_IS_ZigzagOrAlternateHorizontalVertical_8x8_0">
+        <Class name="org.sc29.wg11.mpeg4.part2.sp.texture.Algo_IS_ZigzagOrAlternateHorizontalVertical_8x8"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8_0">
+        <Class name="org.sc29.wg11.mpeg4.part2.sp.texture.Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_1">
+        <Class name="ch.epfl.xronos.mpeg4.part2.texture.Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_IDCT2D_ISOIEC_23002_1_1">
+        <Class name="ch.epfl.xronos.mpeg4.part2.texture.Algo_IDCT2D_ISOIEC_23002_1"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_DCRaddressing_8x8_0">
+        <Class name="org.ietr.mpeg4.part2.sp.texture.dcReconstruction.Algo_DCRaddressing_8x8"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_DCRinvpred_chroma_8x8_0">
+        <Class name="org.ietr.mpeg4.part2.sp.texture.dcReconstruction.Algo_DCRinvpred_chroma_8x8"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Mgnt_DCSplit_2">
+        <Class name="org.sc29.wg11.mpeg4.part2.sp.texture.Mgnt_DCSplit"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_IS_ZigzagOrAlternateHorizontalVertical_8x8_1">
+        <Class name="org.sc29.wg11.mpeg4.part2.sp.texture.Algo_IS_ZigzagOrAlternateHorizontalVertical_8x8"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8_1">
+        <Class name="org.sc29.wg11.mpeg4.part2.sp.texture.Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_2">
+        <Class name="ch.epfl.xronos.mpeg4.part2.texture.Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_IDCT2D_ISOIEC_23002_1_2">
+        <Class name="ch.epfl.xronos.mpeg4.part2.texture.Algo_IDCT2D_ISOIEC_23002_1"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_DCRaddressing_8x8_1">
+        <Class name="org.ietr.mpeg4.part2.sp.texture.dcReconstruction.Algo_DCRaddressing_8x8"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_DCRinvpred_chroma_8x8_1">
+        <Class name="org.ietr.mpeg4.part2.sp.texture.dcReconstruction.Algo_DCRinvpred_chroma_8x8"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Add_nomotion_0">
+        <Class name="fr.irisa.mpeg4.part2.sp.motion.Algo_Add_nomotion"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Add_nomotion_1">
+        <Class name="fr.irisa.mpeg4.part2.sp.motion.Algo_Add_nomotion"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Add_nomotion_2">
+        <Class name="fr.irisa.mpeg4.part2.sp.motion.Algo_Add_nomotion"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Mgnt_MVSequence_0">
+        <Class name="org.ietr.mpeg4.part2.sp.parser.Mgnt_MVSequence"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Mgnt_MVReconstruct_0">
+        <Class name="org.ietr.mpeg4.part2.sp.parser.Mgnt_MVReconstruct"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="splitter_BTYPE2_0">
+        <Class name="ch.epfl.xronos.mpeg4.part2.parser.splitter_BTYPE"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="splitter_MV_0">
+        <Class name="org.ietr.mpeg4.part2.sp.parser.splitter_MV"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Interp_HalfpelBilinearRoundingControl_0">
+        <Class name="org.sc29.wg11.mpeg4.part2.sp.motion.Algo_Interp_HalfpelBilinearRoundingControl"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Add_0">
+        <Class name="ch.epfl.xronos.mpeg4.part2.motion.Algo_Add"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Framebuf_w_Address_16X16_0">
+        <Class name="ch.epfl.xronos.mpeg4.part2.motion.Framebuf_w_Address_16X16"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Interp_HalfpelBilinearRoundingControl_1">
+        <Class name="org.sc29.wg11.mpeg4.part2.sp.motion.Algo_Interp_HalfpelBilinearRoundingControl"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Add_1">
+        <Class name="ch.epfl.xronos.mpeg4.part2.motion.Algo_Add"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Framebuf_w_Address_8X8_0">
+        <Class name="ch.epfl.xronos.mpeg4.part2.motion.Framebuf_w_Address_8X8"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Interp_HalfpelBilinearRoundingControl_2">
+        <Class name="org.sc29.wg11.mpeg4.part2.sp.motion.Algo_Interp_HalfpelBilinearRoundingControl"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Algo_Add_2">
+        <Class name="ch.epfl.xronos.mpeg4.part2.motion.Algo_Add"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="Framebuf_w_Address_8X8_1">
+        <Class name="ch.epfl.xronos.mpeg4.part2.motion.Framebuf_w_Address_8X8"/>
+        <Attribute kind="Flag" name="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_0">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="12"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_1">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="9"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_2">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="12"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_3">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="12"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_4">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="12"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_5">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="12"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_6">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="8"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_7">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="8"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_8">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="8"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_9">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="8"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_10">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="8"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_11">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="8"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_12">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="12"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_13">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="12"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_14">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="8"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_15">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="8"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_16">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="8"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_17">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="8"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_18">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="8"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_19">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="8"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_20">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="12"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_21">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="9"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_22">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="9"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_23">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="9"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_24">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="6"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_25">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="6"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_26">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="3"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_27">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="3"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_28">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="6"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_29">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="3"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_30">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="6"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_31">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="6"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_32">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="3"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_33">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="3"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_34">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="6"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_35">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="3"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_36">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="6"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_37">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="6"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_38">
+        <Class name="it.diee.unica.multidec.Sbox1x2int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="3"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_39">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="3"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_40">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="6"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_41">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="3"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_42">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="9"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_43">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="9"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="sbox_44">
+        <Class name="it.diee.unica.multidec.Sbox2x1int"/>
+        <Parameter name="SIZE">
+            <Expr kind="Literal" literal-kind="Integer" value="9"/>
+        </Parameter>
+        <Attribute kind="Flag" name="count"/>
+    </Instance>
+    <Instance id="selGen_0">
+        <Class name="it.diee.unica.multidec.SelGen"/>
+    </Instance>
+    <Connection dst="Algo_Byte2bit_0" dst-port="BYTE" src="" src-port="bits"/>
+    <Connection dst="Algo_Synp_MPEG_4_0" dst-port="bits"
+        src="Algo_Byte2bit_0" src-port="BITS"/>
+    <Connection dst="splitter_BTYPE_0" dst-port="BTYPE" src="sbox_0" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Mgnt_BlockExpand_0" dst-port="LAST"
+        src="Algo_Synp_MPEG_4_0" src-port="LAST"/>
+    <Connection dst="Mgnt_BlockExpand_0" dst-port="VALUE"
+        src="Algo_Synp_MPEG_4_0" src-port="VALUE"/>
+    <Connection dst="Mgnt_BlockExpand_0" dst-port="RUN"
+        src="Algo_Synp_MPEG_4_0" src-port="RUN"/>
+    <Connection dst="splitter_420_B_0" dst-port="B"
+        src="Mgnt_BlockExpand_0" src-port="OUT"/>
+    <Connection dst="splitter_Qp_0" dst-port="QP"
+        src="Algo_Synp_MPEG_4_0" src-port="QP"/>
+    <Connection dst="" dst-port="WIDTH" src="Algo_Synp_MPEG_4_0" src-port="WIDTH"/>
+    <Connection dst="" dst-port="HEIGHT" src="Algo_Synp_MPEG_4_0" src-port="HEIGHT"/>
+    <Connection dst="Algo_DCRinvpred_luma_16x16_0" dst-port="C"
+        src="Algo_DCRaddressing_16x16_0" src-port="C"/>
+    <Connection dst="Algo_DCRinvpred_luma_16x16_0" dst-port="B"
+        src="Algo_DCRaddressing_16x16_0" src-port="B"/>
+    <Connection dst="Algo_DCRinvpred_luma_16x16_0" dst-port="A"
+        src="Algo_DCRaddressing_16x16_0" src-port="A"/>
+    <Connection dst="Algo_DCRinvpred_luma_16x16_0" dst-port="QFS_DC"
+        src="Mgnt_DCSplit_0" src-port="DC"/>
+    <Connection dst="Algo_DCRinvpred_luma_16x16_0" dst-port="QP"
+        src="splitter_Qp_0" src-port="QUANT_Y"/>
+    <Connection dst="Algo_DCRinvpred_chroma_8x8_0" dst-port="QFS_DC"
+        src="Mgnt_DCSplit_1" src-port="DC"/>
+    <Connection dst="Algo_DCRinvpred_chroma_8x8_0" dst-port="QP"
+        src="splitter_Qp_0" src-port="QUANT_U"/>
+    <Connection dst="Algo_DCRinvpred_chroma_8x8_1" dst-port="QFS_DC"
+        src="Mgnt_DCSplit_2" src-port="DC"/>
+    <Connection dst="Algo_DCRinvpred_chroma_8x8_1" dst-port="QP"
+        src="splitter_Qp_0" src-port="QUANT_V"/>
+    <Connection dst="Algo_Add_nomotion_0" dst-port="BTYPE"
+        src="splitter_BTYPE_0" src-port="Y">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_Add_nomotion_1" dst-port="BTYPE"
+        src="splitter_BTYPE_0" src-port="U">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_Add_nomotion_2" dst-port="BTYPE"
+        src="splitter_BTYPE_0" src-port="V">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Mgnt_DCSplit_0" dst-port="IN"
+        src="splitter_420_B_0" src-port="Y"/>
+    <Connection dst="Mgnt_DCSplit_1" dst-port="IN"
+        src="splitter_420_B_0" src-port="U"/>
+    <Connection dst="Mgnt_DCSplit_2" dst-port="IN"
+        src="splitter_420_B_0" src-port="V"/>
+    <Connection dst="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_0"
+        dst-port="AC"
+        src="Algo_IAP_AdaptiveHorizontalOrVerticalPred_16x16_0" src-port="QF_AC"/>
+    <Connection dst="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_0"
+        dst-port="DC" src="Algo_DCRinvpred_luma_16x16_0" src-port="QF_DC"/>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_16x16_0"
+        dst-port="PQF_AC" src="Algo_IS_0" src-port="PQF_AC"/>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_16x16_0"
+        dst-port="PREV_QP" src="Algo_DCRinvpred_luma_16x16_0" src-port="PREV_QUANT"/>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_16x16_0"
+        dst-port="PTR" src="Algo_DCRinvpred_luma_16x16_0" src-port="PTR"/>
+    <Connection dst="Algo_IS_0" dst-port="QFS_AC" src="Mgnt_DCSplit_0" src-port="AC"/>
+    <Connection dst="Algo_IDCT2D_ISOIEC_23002_1_0" dst-port="IN"
+        src="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_0" src-port="OUT"/>
+    <Connection dst="Algo_IDCT2D_ISOIEC_23002_1_0" dst-port="SIGNED"
+        src="Algo_DCRinvpred_luma_16x16_0" src-port="SIGNED"/>
+    <Connection dst="Algo_IDCT2D_ISOIEC_23002_1_1" dst-port="IN"
+        src="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_1" src-port="OUT"/>
+    <Connection dst="Algo_IDCT2D_ISOIEC_23002_1_1" dst-port="SIGNED"
+        src="Algo_DCRinvpred_chroma_8x8_0" src-port="SIGNED"/>
+    <Connection dst="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_1"
+        dst-port="AC"
+        src="Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8_0" src-port="QF_AC"/>
+    <Connection dst="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_1"
+        dst-port="DC" src="Algo_DCRinvpred_chroma_8x8_0" src-port="QF_DC"/>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8_0"
+        dst-port="PQF_AC"
+        src="Algo_IS_ZigzagOrAlternateHorizontalVertical_8x8_0" src-port="PQF_AC"/>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8_0"
+        dst-port="PREV_QP" src="Algo_DCRinvpred_chroma_8x8_0" src-port="PREV_QUANT"/>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8_0"
+        dst-port="PTR" src="Algo_DCRinvpred_chroma_8x8_0" src-port="PTR"/>
+    <Connection dst="Algo_IS_ZigzagOrAlternateHorizontalVertical_8x8_0"
+        dst-port="QFS_AC" src="Mgnt_DCSplit_1" src-port="AC"/>
+    <Connection dst="Algo_IDCT2D_ISOIEC_23002_1_2" dst-port="IN"
+        src="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_2" src-port="OUT"/>
+    <Connection dst="Algo_IDCT2D_ISOIEC_23002_1_2" dst-port="SIGNED"
+        src="Algo_DCRinvpred_chroma_8x8_1" src-port="SIGNED"/>
+    <Connection dst="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_2"
+        dst-port="AC"
+        src="Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8_1" src-port="QF_AC"/>
+    <Connection dst="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_2"
+        dst-port="DC" src="Algo_DCRinvpred_chroma_8x8_1" src-port="QF_DC"/>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8_1"
+        dst-port="PQF_AC"
+        src="Algo_IS_ZigzagOrAlternateHorizontalVertical_8x8_1" src-port="PQF_AC"/>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8_1"
+        dst-port="PREV_QP" src="Algo_DCRinvpred_chroma_8x8_1" src-port="PREV_QUANT"/>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8_1"
+        dst-port="PTR" src="Algo_DCRinvpred_chroma_8x8_1" src-port="PTR"/>
+    <Connection dst="Algo_IS_ZigzagOrAlternateHorizontalVertical_8x8_1"
+        dst-port="QFS_AC" src="Mgnt_DCSplit_2" src-port="AC"/>
+    <Connection dst="" dst-port="VID" src="Mgnt_Merger420_0" src-port="YUV"/>
+    <Connection dst="sbox_0" dst-port="in1" src="Algo_Synp_MPEG_4_0" src-port="BTYPE"/>
+    <Connection dst="splitter_BTYPE2_0" dst-port="BTYPE" src="sbox_0" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="Mgnt_MVSequence_0" dst-port="BTYPE" src="sbox_0" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="Mgnt_MVReconstruct_0" dst-port="BTYPE" src="sbox_0" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="MV_consume_0" dst-port="IN" src="sbox_1" src-port="out1"/>
+    <Connection dst="sbox_1" dst-port="in1" src="Algo_Synp_MPEG_4_0" src-port="MV"/>
+    <Connection dst="Mgnt_MVReconstruct_0" dst-port="MVIN" src="sbox_1" src-port="out2"/>
+    <Connection dst="Mgnt_MVReconstruct_0" dst-port="A"
+        src="Mgnt_MVSequence_0" src-port="A"/>
+    <Connection dst="sbox_2" dst-port="in1" src="sbox_0" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="splitter_420_B_0" dst-port="BTYPE" src="sbox_2" src-port="out1"/>
+    <Connection dst="sbox_2" dst-port="in2" src="sbox_0" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="splitter_MV_0" dst-port="MV"
+        src="Mgnt_MVReconstruct_0" src-port="MV"/>
+    <Connection dst="splitter_MV_0" dst-port="BTYPE" src="sbox_0" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_3" dst-port="in1" src="splitter_BTYPE_0" src-port="Y">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_DCRaddressing_16x16_0" dst-port="BTYPE"
+        src="sbox_3" src-port="out1"/>
+    <Connection dst="sbox_3" dst-port="in2" src="splitter_BTYPE2_0" src-port="Y">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_4" dst-port="in1" src="splitter_BTYPE_0" src-port="Y">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_DCRinvpred_luma_16x16_0" dst-port="BTYPE"
+        src="sbox_4" src-port="out1"/>
+    <Connection dst="sbox_4" dst-port="in2" src="splitter_BTYPE2_0" src-port="Y">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_5" dst-port="in1" src="splitter_BTYPE_0" src-port="V">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_DCRaddressing_8x8_1" dst-port="BTYPE"
+        src="sbox_5" src-port="out1"/>
+    <Connection dst="sbox_5" dst-port="in2" src="splitter_BTYPE2_0" src-port="U">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_6" dst-port="in1"
+        src="Algo_DCRaddressing_8x8_1" src-port="B"/>
+    <Connection dst="Algo_DCRinvpred_chroma_8x8_0" dst-port="B"
+        src="sbox_7" src-port="out1"/>
+    <Connection dst="sbox_7" dst-port="in2" src="sbox_6" src-port="out2"/>
+    <Connection dst="sbox_8" dst-port="in1"
+        src="Algo_DCRaddressing_8x8_1" src-port="A"/>
+    <Connection dst="Algo_DCRinvpred_chroma_8x8_0" dst-port="A"
+        src="sbox_9" src-port="out1"/>
+    <Connection dst="sbox_9" dst-port="in2" src="sbox_8" src-port="out2"/>
+    <Connection dst="sbox_10" dst-port="in1"
+        src="Algo_DCRaddressing_8x8_1" src-port="C"/>
+    <Connection dst="Algo_DCRinvpred_chroma_8x8_0" dst-port="C"
+        src="sbox_11" src-port="out1"/>
+    <Connection dst="sbox_11" dst-port="in2" src="sbox_10" src-port="out2"/>
+    <Connection dst="sbox_12" dst-port="in1" src="splitter_BTYPE_0" src-port="U">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_DCRinvpred_chroma_8x8_0" dst-port="BTYPE"
+        src="sbox_12" src-port="out1"/>
+    <Connection dst="sbox_12" dst-port="in2" src="splitter_BTYPE2_0" src-port="U">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_13" dst-port="in1" src="splitter_BTYPE_0" src-port="U">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_DCRaddressing_8x8_0" dst-port="BTYPE"
+        src="sbox_13" src-port="out1"/>
+    <Connection dst="sbox_13" dst-port="in2" src="splitter_BTYPE2_0" src-port="V">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_7" dst-port="in1" src="sbox_14" src-port="out1"/>
+    <Connection dst="sbox_14" dst-port="in1"
+        src="Algo_DCRaddressing_8x8_0" src-port="B"/>
+    <Connection dst="sbox_15" dst-port="in1" src="sbox_6" src-port="out1"/>
+    <Connection dst="Algo_DCRinvpred_chroma_8x8_1" dst-port="B"
+        src="sbox_15" src-port="out1"/>
+    <Connection dst="sbox_15" dst-port="in2" src="sbox_14" src-port="out2"/>
+    <Connection dst="sbox_9" dst-port="in1" src="sbox_16" src-port="out1"/>
+    <Connection dst="sbox_16" dst-port="in1"
+        src="Algo_DCRaddressing_8x8_0" src-port="A"/>
+    <Connection dst="sbox_17" dst-port="in1" src="sbox_8" src-port="out1"/>
+    <Connection dst="Algo_DCRinvpred_chroma_8x8_1" dst-port="A"
+        src="sbox_17" src-port="out1"/>
+    <Connection dst="sbox_17" dst-port="in2" src="sbox_16" src-port="out2"/>
+    <Connection dst="sbox_11" dst-port="in1" src="sbox_18" src-port="out1"/>
+    <Connection dst="sbox_18" dst-port="in1"
+        src="Algo_DCRaddressing_8x8_0" src-port="C"/>
+    <Connection dst="sbox_19" dst-port="in1" src="sbox_10" src-port="out1"/>
+    <Connection dst="Algo_DCRinvpred_chroma_8x8_1" dst-port="C"
+        src="sbox_19" src-port="out1"/>
+    <Connection dst="sbox_19" dst-port="in2" src="sbox_18" src-port="out2"/>
+    <Connection dst="sbox_20" dst-port="in1" src="splitter_BTYPE_0" src-port="V">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_DCRinvpred_chroma_8x8_1" dst-port="BTYPE"
+        src="sbox_20" src-port="out1"/>
+    <Connection dst="sbox_20" dst-port="in2" src="splitter_BTYPE2_0" src-port="V">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="Algo_Add_0" dst-port="MOT"
+        src="Algo_Interp_HalfpelBilinearRoundingControl_0" src-port="MOT"/>
+    <Connection dst="Algo_Add_0" dst-port="BTYPE"
+        src="splitter_BTYPE2_0" src-port="Y">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="Algo_Add_nomotion_0" dst-port="TEX" src="sbox_21" src-port="out1"/>
+    <Connection dst="sbox_21" dst-port="in1"
+        src="Algo_IDCT2D_ISOIEC_23002_1_0" src-port="OUT"/>
+    <Connection dst="Algo_Add_0" dst-port="TEX" src="sbox_21" src-port="out2"/>
+    <Connection dst="Framebuf_w_Address_16X16_0" dst-port="WD"
+        src="Algo_Add_0" src-port="VID">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="Framebuf_w_Address_16X16_0" dst-port="MV"
+        src="splitter_MV_0" src-port="Y"/>
+    <Connection dst="Framebuf_w_Address_16X16_0" dst-port="BTYPE"
+        src="splitter_BTYPE2_0" src-port="Y">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="Algo_Add_1" dst-port="MOT"
+        src="Algo_Interp_HalfpelBilinearRoundingControl_1" src-port="MOT"/>
+    <Connection dst="Algo_Add_1" dst-port="BTYPE"
+        src="splitter_BTYPE2_0" src-port="U">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="Algo_Add_nomotion_1" dst-port="TEX" src="sbox_22" src-port="out1"/>
+    <Connection dst="sbox_22" dst-port="in1"
+        src="Algo_IDCT2D_ISOIEC_23002_1_1" src-port="OUT"/>
+    <Connection dst="Algo_Add_1" dst-port="TEX" src="sbox_22" src-port="out2"/>
+    <Connection dst="Framebuf_w_Address_8X8_0" dst-port="WD"
+        src="Algo_Add_1" src-port="VID">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="Framebuf_w_Address_8X8_0" dst-port="MV"
+        src="splitter_MV_0" src-port="U"/>
+    <Connection dst="Framebuf_w_Address_8X8_0" dst-port="BTYPE"
+        src="splitter_BTYPE2_0" src-port="U">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="Algo_Add_2" dst-port="MOT"
+        src="Algo_Interp_HalfpelBilinearRoundingControl_2" src-port="MOT"/>
+    <Connection dst="Algo_Add_2" dst-port="BTYPE"
+        src="splitter_BTYPE2_0" src-port="V">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="Algo_Add_nomotion_2" dst-port="TEX" src="sbox_23" src-port="out1"/>
+    <Connection dst="sbox_23" dst-port="in1"
+        src="Algo_IDCT2D_ISOIEC_23002_1_2" src-port="OUT"/>
+    <Connection dst="Algo_Add_2" dst-port="TEX" src="sbox_23" src-port="out2"/>
+    <Connection dst="Framebuf_w_Address_8X8_1" dst-port="WD"
+        src="Algo_Add_2" src-port="VID">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="Framebuf_w_Address_8X8_1" dst-port="MV"
+        src="splitter_MV_0" src-port="V"/>
+    <Connection dst="Framebuf_w_Address_8X8_1" dst-port="BTYPE"
+        src="splitter_BTYPE2_0" src-port="V">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_24" dst-port="in1"
+        src="Algo_DCRinvpred_luma_16x16_0" src-port="QUANT"/>
+    <Connection dst="sbox_25" dst-port="in1" src="sbox_24" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_0"
+        dst-port="QP" src="sbox_25" src-port="out1"/>
+    <Connection dst="sbox_25" dst-port="in2" src="sbox_24" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_26" dst-port="in1"
+        src="Algo_DCRinvpred_luma_16x16_0" src-port="AC_PRED_DIR"/>
+    <Connection dst="sbox_27" dst-port="in1" src="sbox_26" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_16x16_0"
+        dst-port="AC_PRED_DIR" src="sbox_27" src-port="out1"/>
+    <Connection dst="sbox_27" dst-port="in2" src="sbox_26" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_28" dst-port="in1" src="sbox_24" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_16x16_0"
+        dst-port="QP" src="sbox_28" src-port="out1"/>
+    <Connection dst="sbox_28" dst-port="in2" src="sbox_24" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_29" dst-port="in1" src="sbox_26" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_IS_0" dst-port="AC_PRED_DIR" src="sbox_29" src-port="out1"/>
+    <Connection dst="sbox_29" dst-port="in2" src="sbox_26" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_30" dst-port="in1"
+        src="Algo_DCRinvpred_chroma_8x8_0" src-port="QUANT"/>
+    <Connection dst="sbox_31" dst-port="in1" src="sbox_30" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_1"
+        dst-port="QP" src="sbox_31" src-port="out1"/>
+    <Connection dst="sbox_31" dst-port="in2" src="sbox_30" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_32" dst-port="in1"
+        src="Algo_DCRinvpred_chroma_8x8_0" src-port="AC_PRED_DIR"/>
+    <Connection dst="sbox_33" dst-port="in1" src="sbox_32" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8_0"
+        dst-port="AC_PRED_DIR" src="sbox_33" src-port="out1"/>
+    <Connection dst="sbox_33" dst-port="in2" src="sbox_32" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_34" dst-port="in1" src="sbox_30" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8_0"
+        dst-port="QP" src="sbox_34" src-port="out1"/>
+    <Connection dst="sbox_34" dst-port="in2" src="sbox_30" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_35" dst-port="in1" src="sbox_32" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_IS_ZigzagOrAlternateHorizontalVertical_8x8_0"
+        dst-port="AC_PRED_DIR" src="sbox_35" src-port="out1"/>
+    <Connection dst="sbox_35" dst-port="in2" src="sbox_32" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_36" dst-port="in1"
+        src="Algo_DCRinvpred_chroma_8x8_1" src-port="QUANT"/>
+    <Connection dst="sbox_37" dst-port="in1" src="sbox_36" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_IQ_QSAbdQmatrixMp4vOrH263Scaler_2"
+        dst-port="QP" src="sbox_37" src-port="out1"/>
+    <Connection dst="sbox_37" dst-port="in2" src="sbox_36" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_38" dst-port="in1"
+        src="Algo_DCRinvpred_chroma_8x8_1" src-port="AC_PRED_DIR"/>
+    <Connection dst="sbox_39" dst-port="in1" src="sbox_38" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8_1"
+        dst-port="AC_PRED_DIR" src="sbox_39" src-port="out1"/>
+    <Connection dst="sbox_39" dst-port="in2" src="sbox_38" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_40" dst-port="in1" src="sbox_36" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_IAP_AdaptiveHorizontalOrVerticalPred_8x8_1"
+        dst-port="QP" src="sbox_40" src-port="out1"/>
+    <Connection dst="sbox_40" dst-port="in2" src="sbox_36" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_41" dst-port="in1" src="sbox_38" src-port="out1">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_Intra"/>
+    </Connection>
+    <Connection dst="Algo_IS_ZigzagOrAlternateHorizontalVertical_8x8_1"
+        dst-port="AC_PRED_DIR" src="sbox_41" src-port="out1"/>
+    <Connection dst="sbox_41" dst-port="in2" src="sbox_38" src-port="out2">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_42" dst-port="in1" src="Algo_Add_nomotion_0" src-port="VID"/>
+    <Connection dst="Mgnt_Merger420_0" dst-port="Y" src="sbox_42" src-port="out1"/>
+    <Connection dst="sbox_42" dst-port="in2" src="Algo_Add_0" src-port="VID">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_43" dst-port="in1" src="Algo_Add_nomotion_1" src-port="VID"/>
+    <Connection dst="Mgnt_Merger420_0" dst-port="U" src="sbox_43" src-port="out1"/>
+    <Connection dst="sbox_43" dst-port="in2" src="Algo_Add_1" src-port="VID">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="sbox_44" dst-port="in1" src="Algo_Add_nomotion_2" src-port="VID"/>
+    <Connection dst="Mgnt_Merger420_0" dst-port="V" src="sbox_44" src-port="out1"/>
+    <Connection dst="sbox_44" dst-port="in2" src="Algo_Add_2" src-port="VID">
+        <Attribute kind="String" name="broadcast" value="ch.epfl.xronos.mpeg4.part2.Decoder_parallel"/>
+    </Connection>
+    <Connection dst="Algo_Interp_HalfpelBilinearRoundingControl_0"
+        dst-port="RD" src="Framebuf_w_Address_16X16_0" src-port="RD"/>
+    <Connection dst="Algo_Interp_HalfpelBilinearRoundingControl_0"
+        dst-port="halfpel" src="Framebuf_w_Address_16X16_0" src-port="halfpel"/>
+    <Connection dst="Algo_Interp_HalfpelBilinearRoundingControl_1"
+        dst-port="RD" src="Framebuf_w_Address_8X8_0" src-port="RD"/>
+    <Connection dst="Algo_Interp_HalfpelBilinearRoundingControl_1"
+        dst-port="halfpel" src="Framebuf_w_Address_8X8_0" src-port="halfpel"/>
+    <Connection dst="Algo_Interp_HalfpelBilinearRoundingControl_2"
+        dst-port="RD" src="Framebuf_w_Address_8X8_1" src-port="RD"/>
+    <Connection dst="Algo_Interp_HalfpelBilinearRoundingControl_2"
+        dst-port="halfpel" src="Framebuf_w_Address_8X8_1" src-port="halfpel"/>
+    <Connection dst="selGen_0" dst-port="kernelID" src="" src-port="ID"/>
+    <Connection dst="sbox_0" dst-port="sel" src="selGen_0" src-port="sel0"/>
+    <Connection dst="sbox_1" dst-port="sel" src="selGen_0" src-port="sel1"/>
+    <Connection dst="sbox_2" dst-port="sel" src="selGen_0" src-port="sel2"/>
+    <Connection dst="sbox_3" dst-port="sel" src="selGen_0" src-port="sel3"/>
+    <Connection dst="sbox_4" dst-port="sel" src="selGen_0" src-port="sel4"/>
+    <Connection dst="sbox_5" dst-port="sel" src="selGen_0" src-port="sel5"/>
+    <Connection dst="sbox_6" dst-port="sel" src="selGen_0" src-port="sel6"/>
+    <Connection dst="sbox_7" dst-port="sel" src="selGen_0" src-port="sel7"/>
+    <Connection dst="sbox_8" dst-port="sel" src="selGen_0" src-port="sel8"/>
+    <Connection dst="sbox_9" dst-port="sel" src="selGen_0" src-port="sel9"/>
+    <Connection dst="sbox_10" dst-port="sel" src="selGen_0" src-port="sel10"/>
+    <Connection dst="sbox_11" dst-port="sel" src="selGen_0" src-port="sel11"/>
+    <Connection dst="sbox_12" dst-port="sel" src="selGen_0" src-port="sel12"/>
+    <Connection dst="sbox_13" dst-port="sel" src="selGen_0" src-port="sel13"/>
+    <Connection dst="sbox_14" dst-port="sel" src="selGen_0" src-port="sel14"/>
+    <Connection dst="sbox_15" dst-port="sel" src="selGen_0" src-port="sel15"/>
+    <Connection dst="sbox_16" dst-port="sel" src="selGen_0" src-port="sel16"/>
+    <Connection dst="sbox_17" dst-port="sel" src="selGen_0" src-port="sel17"/>
+    <Connection dst="sbox_18" dst-port="sel" src="selGen_0" src-port="sel18"/>
+    <Connection dst="sbox_19" dst-port="sel" src="selGen_0" src-port="sel19"/>
+    <Connection dst="sbox_20" dst-port="sel" src="selGen_0" src-port="sel20"/>
+    <Connection dst="sbox_21" dst-port="sel" src="selGen_0" src-port="sel21"/>
+    <Connection dst="sbox_22" dst-port="sel" src="selGen_0" src-port="sel22"/>
+    <Connection dst="sbox_23" dst-port="sel" src="selGen_0" src-port="sel23"/>
+    <Connection dst="sbox_24" dst-port="sel" src="selGen_0" src-port="sel24"/>
+    <Connection dst="sbox_25" dst-port="sel" src="selGen_0" src-port="sel25"/>
+    <Connection dst="sbox_26" dst-port="sel" src="selGen_0" src-port="sel26"/>
+    <Connection dst="sbox_27" dst-port="sel" src="selGen_0" src-port="sel27"/>
+    <Connection dst="sbox_28" dst-port="sel" src="selGen_0" src-port="sel28"/>
+    <Connection dst="sbox_29" dst-port="sel" src="selGen_0" src-port="sel29"/>
+    <Connection dst="sbox_30" dst-port="sel" src="selGen_0" src-port="sel30"/>
+    <Connection dst="sbox_31" dst-port="sel" src="selGen_0" src-port="sel31"/>
+    <Connection dst="sbox_32" dst-port="sel" src="selGen_0" src-port="sel32"/>
+    <Connection dst="sbox_33" dst-port="sel" src="selGen_0" src-port="sel33"/>
+    <Connection dst="sbox_34" dst-port="sel" src="selGen_0" src-port="sel34"/>
+    <Connection dst="sbox_35" dst-port="sel" src="selGen_0" src-port="sel35"/>
+    <Connection dst="sbox_36" dst-port="sel" src="selGen_0" src-port="sel36"/>
+    <Connection dst="sbox_37" dst-port="sel" src="selGen_0" src-port="sel37"/>
+    <Connection dst="sbox_38" dst-port="sel" src="selGen_0" src-port="sel38"/>
+    <Connection dst="sbox_39" dst-port="sel" src="selGen_0" src-port="sel39"/>
+    <Connection dst="sbox_40" dst-port="sel" src="selGen_0" src-port="sel40"/>
+    <Connection dst="sbox_41" dst-port="sel" src="selGen_0" src-port="sel41"/>
+    <Connection dst="sbox_42" dst-port="sel" src="selGen_0" src-port="sel42"/>
+    <Connection dst="sbox_43" dst-port="sel" src="selGen_0" src-port="sel43"/>
+    <Connection dst="sbox_44" dst-port="sel" src="selGen_0" src-port="sel44"/>
+</XDF>
