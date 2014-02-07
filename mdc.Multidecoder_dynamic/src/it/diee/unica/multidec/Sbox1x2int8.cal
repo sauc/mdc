@@ -5,7 +5,7 @@
 
 package it.diee.unica.multidec;
 
- actor Sbox1x2int (int SIZE=12) bool sel, int(size=SIZE)in1 ==> int(size=SIZE)out1, int(size=SIZE)out2:
+ actor Sbox1x2int8 (int SIZE=8) bool sel, int(size=SIZE)in1 ==> int(size=SIZE)out1, int(size=SIZE)out2:
 
   bool selector := false;
 
