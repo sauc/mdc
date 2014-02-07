@@ -142,7 +142,7 @@ actor DisplayYUV()
 		chromaComponent := 1;
 	end
 
-	displayPicture: action ==> 
+	displayPicture: action ==>
 	guard
 		nbBlockGot >= pictureSizeInMb,
 		(displayYUV_getFlags() & DISP_ENABLE) != 0
@@ -153,7 +153,7 @@ actor DisplayYUV()
 		nbFrameDecoded := nbFrameDecoded + 1;
 	end
 	
-	displayDisable: action ==> 
+	displayDisable: action ==>
 	guard
 		nbBlockGot >= pictureSizeInMb
 	do
