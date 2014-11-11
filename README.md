@@ -1,4 +1,4 @@
-mdc
+mdc multi-decoder
 ===
 
-This repository contains the projec related to the Multi-Dataflow Composer tool
+This repository contains a project of multi-standard decoder for the Multi-Dataflow Composer tool.
